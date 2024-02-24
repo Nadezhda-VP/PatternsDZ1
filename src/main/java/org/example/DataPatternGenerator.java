@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class DataPatternGenerator {
     final static String[] federalCities =
-            {"Москва", "Ростов-на-Дону", "Воронеж", "НовоРосийск", "Шахты"};
+            {"Москва", "Ростов-на-Дону", "Воронеж", "Горно-Алтайск", "Казань"};
 
     public static DataPattern generateData() {
 

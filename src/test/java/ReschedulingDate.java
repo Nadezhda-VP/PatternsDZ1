@@ -27,7 +27,7 @@ public class ReschedulingDate {
         $("[data-test-id ='name'] input").setValue(dataText.getName());
         dateElement = $("[data-test-id ='date'] input");
         dateElement.sendKeys(Keys.LEFT_CONTROL + "a" + Keys.BACK_SPACE);
-        dateElement.setValue(date.date());
+        dateElement.setValue(date.date(3));
         $(".input__inner").click();
         $("[data-test-id ='phone'] input").setValue(dataText.getPhone());
         $("[data-test-id ='agreement']").click();
@@ -36,17 +36,17 @@ public class ReschedulingDate {
         planBtnElement.click();
 
         planSuccessElement = $("[data-test-id=success-notification]");
-        planSuccessElement.shouldHave(text("Встреча успешно запланирована на")).shouldHave(text(date.date()));
+        planSuccessElement.shouldHave(text("Встреча успешно запланирована на")).shouldHave(text(date.date(3)));
 
         dateElement.sendKeys(Keys.LEFT_CONTROL + "a" + Keys.BACK_SPACE);
-        dateElement.setValue(date.date());
+        dateElement.setValue(date.date(4));
         planBtnElement.click();
 
         replainElement = $("[data-test-id=replan-notification]");
         replainElement.shouldHave(text("Необходимо подтверждение"));
         replainElement.$$("button").find(exactText("Перепланировать")).click();
 
-        planSuccessElement.shouldHave(text("Встреча успешно запланирована на")).shouldHave(text(date.date()));
+        planSuccessElement.shouldHave(text("Встреча успешно запланирована на")).shouldHave(text(date.date(4)));
     }
 
 }
