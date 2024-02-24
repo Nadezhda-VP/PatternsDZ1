@@ -18,7 +18,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
     testImplementation 'com.codeborne:selenide:6.17.1'
     implementation ('com.github.javafaker:javafaker:0.14') { exclude module: 'org.yaml' }
-    //implementation group: 'org.yaml', name: 'snakeyaml', version: '1.17'
+    implementation group: 'org.yaml', name: 'snakeyaml', version: '1.17'
 }
 
 test {
