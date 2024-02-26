@@ -1,7 +1,8 @@
+package test;
+
+
+import data.DataPatternGenerator;
 import com.codeborne.selenide.SelenideElement;
-import org.example.DataPattern;
-import org.example.DataPatternGenerator;
-import org.example.DateFormGenerator;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
 
@@ -9,10 +10,9 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-
 public class ReschedulingDate {
-    private DataPattern dataText = DataPatternGenerator.generateData();
-    private DateFormGenerator date = new DateFormGenerator();
+    private DataPatternGenerator.DataPattern dataText = DataPatternGenerator.generateData();
+    private DataPatternGenerator date = new DataPatternGenerator();
 
     private SelenideElement dateElement;
     private SelenideElement planBtnElement;
